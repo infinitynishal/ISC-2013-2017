@@ -26,10 +26,8 @@ public class Q3_2017 {
                         b = (char)(a+13);
                     }else if(na>=110&&na<=122){//For n-z
                         b = (char)(a-13);
-                    }else if(na==32||na==46){//For ' ' and '.'
-                        b=a;
                     }else{//For every thing else
-                        b='?';
+                        b=a;
                     }
                     //catenating individual char to make String
                     ns += b;
