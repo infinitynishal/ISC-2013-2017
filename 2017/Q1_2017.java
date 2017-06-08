@@ -20,20 +20,20 @@ public class Q1_2017 {
                             int count = 0;
                             count += N/i;                            
                             N -= i*count;
-                            System.out.println(i+" x "+count+" = "+i*count);
+                            System.out.printf("%-25s%2d%3s%2d%3s%4d%n","",i," x ",count," = ",i*count);
+                            //System.out.println(i+" x "+count+" = "+i*count);
                             total_count += count;
                         }                  
                     }
                     //Final 3 lines change depending on remainder                    
                     if(N>0){
-                        System.out.println("Remaining Boxes \t "+N +" x 1 = "+N);
-                        System.out.println("Total number of Boxes \t= "+temp);                  
-                        System.out.println("Total number of cartons \t= "+(total_count+1));
-                        
+                        System.out.printf("%-25s%2d%3s%2d%3s%4d%n","Remaining Boxes",N," x ",1," = ",N);
+                        System.out.printf("%-25s%2s%3s%2s%3s%4d%n","Total number of Boxes","","",""," = ",temp);
+                        System.out.printf("%-25s%2s%3s%2s%3s%4d%n","Total number of cartons","","",""," = ",(total_count+1)); 
                     }else{
-                        System.out.println("Remaining Boxes \t= "+N);
-                        System.out.println("Total number of Boxes \t= "+temp);
-                        System.out.println("Total number of cartons \t= "+total_count);
+                        System.out.printf("%-25s%2s%3s%2s%3s%4d%n","Remaining Boxes","","",""," = ",N);
+                        System.out.printf("%-25s%2s%3s%2s%3s%4d%n","Total number of Boxes","","",""," = ",temp);
+                        System.out.printf("%-25s%2s%3s%2s%3s%4d%n","Total number of cartons","","",""," = ",(total_count));
                     }                
             }else{
                 System.out.println("INVALID INPUT");
