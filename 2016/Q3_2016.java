@@ -1,6 +1,4 @@
 import java.util.*;
-
-import javax.print.DocFlavor.STRING;
 public class Q3_2016 {
     public boolean vowelChecker(String s){
         char fc,lc;//First Char & Last Char
