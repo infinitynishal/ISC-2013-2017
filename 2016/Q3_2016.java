@@ -1,9 +1,24 @@
 import java.util.*;
+
+import javax.print.DocFlavor.STRING;
 public class Q3_2016 {
+    public boolean vowelChecker(String s){
+        char fc,lc;
+        int len = s.length();
+        fc = s.charAt(0);
+        lc = s.charAt(len-1);
+        if((fc=='A'||fc=='E'||fc=='I'||fc=='O'||fc=='U')&&(lc=='A'||lc=='E'||lc=='I'||lc=='O'||lc=='U')){
+            return true;
+        }else{
+            return false;
+        }
+    }
     public static void main(String args[]){
+        Q3_2016 ob = new Q3_2016();
         Scanner sc = new Scanner(System.in);
-        String in="";
-        int i;        
+        String in="",first="",second="",resent ="";
+        int i,count=0;
+        boolean valid = false;        
         //Accepting String in UPPERCASE
         System.out.println("");
         in = sc.nextLine();
@@ -14,14 +29,25 @@ public class Q3_2016 {
             if(in.charAt(lastpos)=='.'||in.charAt(lastpos)=='!'||in.charAt(lastpos)=='?'){
                 StringTokenizer st = new StringTokenizer(in," .?!");
                 int N = st.countTokens();
-                String arr[] = new String[N]; 
+                String arr[] = new String[N];  
                 //Array with individual Words as elements          
-                for (i=0;i<N;i++){
+                for(i=0;i<N;i++){
                     arr[i] = st.nextToken();
                 }
-                for (i=0;i<N;i++){
-                    System.out.println(arr[i]);
-                }         
+                //Check individual elements
+                for(i=0;i<N;i++){
+                    valid = false;
+                    valid = ob.vowelChecker(arr[i]);
+                    if(valid==true){
+                        count++;
+                        first = first.concat(arr[i]+" ");
+                    }else{
+                        second = second.concat(arr[i]+" ");
+                    }
+                } 
+                resent=first+second;
+                System.out.println("NUMBER OF WORDS BEGINNING AND ENDING WITH A VOWEL = "+count);    
+                System.out.println(resent);  
             }else{
                 System.out.print("INVALID INPUT");
             }
