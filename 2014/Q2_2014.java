@@ -65,7 +65,7 @@ public class Q2_2014 {
             } 
         } catch (Exception e) {
             //TODO: handle exception
-            System.out.print("INVALID INPUT");
+            System.out.println("INVALID INPUT");
         }        
         
     }
