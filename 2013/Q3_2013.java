@@ -30,18 +30,17 @@ public class Q3_2013 {
                     }              
                 }
                 //Print count or otherwise
-                System.out.println("");
                     if(count>0){
                     System.out.println("NUMBER OF PALINDROMIC WORDS : \t"+count);
                     }else{
                         System.out.println("NO PALINDROMIC WORDS");
                     }            
             }else{
-                System.out.print("INVALID INPUT");
+                System.out.println("INVALID INPUT");
             }
         } catch (Exception e) {
             //TODO: handle exception
-            System.out.print("INVALID INPUT");
+            System.out.println("INVALID INPUT");
         }        
         
     }
