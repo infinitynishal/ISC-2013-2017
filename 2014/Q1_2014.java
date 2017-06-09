@@ -60,13 +60,13 @@ public class Q1_2014 {
                         count++;
                     }
                 }
-                System.out.print("\nFREQUENCY OF COMPOSITE MAGIC INTEGERS IS :"+count);
+                System.out.println("\nFREQUENCY OF COMPOSITE MAGIC INTEGERS IS :"+count);
             }else{
-                System.out.print("INVALID INPUT");
+                System.out.println("INVALID INPUT");
             }             
         } catch (Exception e) {
             //TODO: handle exception
-            System.out.print("INVALID INPUT");
+            System.out.println("INVALID INPUT");
         }        
         
     }
