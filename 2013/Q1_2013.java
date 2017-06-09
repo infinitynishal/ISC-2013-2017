@@ -14,7 +14,7 @@ public class Q1_2013 {
         try {
             //Check if Valid Input
             if(in.length()!=10){
-                System.out.print("INVALID INPUT");
+                System.out.println("INVALID INPUT");
             }else{
                 //Create an Array
                 for(i=0;i<9;i++){            
@@ -41,7 +41,7 @@ public class Q1_2013 {
             }
         } catch (Exception e) {
             //TODO: handle exception
-            System.out.print("INVALID INPUT");
+            System.out.println("INVALID INPUT");
         }        
         
     }
