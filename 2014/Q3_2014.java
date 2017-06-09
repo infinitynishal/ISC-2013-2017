@@ -2,9 +2,10 @@ import java.util.*;
 public class Q3_2014 {
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
-        String in="",word_delete="";
+        //initialize variables
+        String in="",word_delete="",mod_sentence="";
         int i,pos=0;
-        char lch;        
+        char lch;//last character        
         //Accepting String in UPPERCASE
         System.out.println("");
         in = sc.nextLine();
@@ -13,6 +14,7 @@ public class Q3_2014 {
         try {
             int lastpos = in.length()-1;
             lch = in.charAt(lastpos);
+            //Check if the last char is valid
             if(lch=='.'||lch=='!'||lch=='?'){
                 StringTokenizer st = new StringTokenizer(in," .?!");
                 int N = st.countTokens();
@@ -27,15 +29,20 @@ public class Q3_2014 {
                 System.out.print("\nWORD POSITION IN THE SENTENCE : ");
                 pos = sc.nextInt();
                 pos -= 1;
-                //Printing out the modified sentence
-                for (i=0;i<N;i++){
-                    if(i==pos&&arr[pos].equals(word_delete)){
+                //Check if user entered valid position
+                if(pos>=0||pos<N){
+                    //Printing out the modified sentence
+                    for (i=0;i<N;i++){
+                        if(i==pos&&arr[pos].equals(word_delete)){
 
-                    }else{
-                        System.out.print(arr[i]+" ");
+                        }else{
+                            mod_sentence += (arr[i]+" ");
+                        }
                     }
-                }System.out.println(lch);
-                           
+                    System.out.println(mod_sentence.trim()+lch);
+                }else{
+                    System.out.println("INVALID POSITION");
+                }        
             }else{
                 System.out.println("INVALID INPUT");
             }
