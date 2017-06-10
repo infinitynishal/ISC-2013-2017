@@ -1,10 +1,21 @@
 import java.util.*;
-
-import javax.print.DocFlavor.CHAR_ARRAY;
 public class Q3_2015 {
+    //Function to count and return number of vowels
+    public int vowelCount(String s){
+        int i,count = 0,len = s.length();
+        char ch;
+        for(i=0;i<len;i++){
+            ch = s.charAt(i);
+            if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'||ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U'){
+                count++;
+            }
+        }
+        return count;
+    }
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
-        String in="";
+        Q3_2015 ob = new Q3_2015();
+        String in="",mod_sentence="";
         int i;        
         //Accepting String
         System.out.println("");
@@ -23,19 +34,20 @@ public class Q3_2015 {
                 }
                 //Convert the first letter of each word to uppercase          
                 for (i=0;i<N;i++){
-                    String is = arr[i];//initial string
-                    int len = is.length();
-                    char ch = is.charAt(0);
-                    ch = Character.toUpperCase(ch);
-                    //create new string with first char in UPPERCASE
-                    String ns = (ch+"").concat(is.substring(1));
-                    arr[i]=ns;
+                    arr[i] = Character.toUpperCase(arr[i].charAt(0)) + arr[i].substring(1);                    
                 }
                 //Print the changed sentence
                 for (i=0;i<N;i++){
-                    System.out.print(arr[i]+" ");
-                }System.out.print(last);
-
+                    mod_sentence += (arr[i]+" ");
+                }
+                System.out.println(mod_sentence.trim()+last);
+                //Print word-vowel-consonant table
+                System.out.printf("%-18s%10s%13s%n","Word","Vowels","Consonants");
+                for (i=0;i<N;i++){
+                    int vow = ob.vowelCount(arr[i]);
+                    int cons = arr[i].length() - vow;
+                    System.out.printf("%-18s%10d%13d%n",arr[i],vow,cons);
+                }
             }else{
                 System.out.println("INVALID INPUT");
             }
