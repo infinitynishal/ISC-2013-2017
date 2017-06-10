@@ -25,24 +25,24 @@ public class Q2_2015
                     System.out.println("");
                 }
                 //Rotating Array
-                for(i=0;i<M;i++){
+                int B[][] = new int[M][M];
+                int x=0,y=0;
+                for(i=M-1;i>=0;i--){
                         for(j=0;j<M;j++){
-                            int temp=0; 
-                            temp = A[i][j];
-                            A[i][j] = A[j][M-1-i];
-                            A[j][M-1-i] = temp;
-                        }
+                            B[x][y] = A[i][j];
+                            x++;
+                        }y++;x=0;
                 }
                 //Printing Rotated Array
                 System.out.println("\nMATRIX AFTER ROTATION");
                 for(i=0;i<M;i++){
                         for(j=0;j<M;j++){
-                            System.out.print(A[i][j]+"\t");
+                            System.out.print(B[i][j]+"\t");
                         }
                         System.out.println("");
                 }
                 //Finding Sum of corner elements
-                sum = A[0][0]+A[0][M-1]+A[M-1][0]+A[M-1][M-1];
+                sum = B[0][0]+B[0][M-1]+B[M-1][0]+B[M-1][M-1];
                 System.out.println("\nSum of the corner eements= "+sum);
             }else{
                 System.out.println("SIZE OUT OF RANGE");
