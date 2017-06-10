@@ -15,7 +15,7 @@ public class Q2_2017 {
                 String A[][] = new String[N][5];
                 String K[] = new String[5];
                 int S[] = new int[N];
-                int highCount = 0;
+                int highScore = 0;
                 //Input Particpant Array 
                 for(i=0;i<N;i++){
                     System.out.print("\nParticipant "+(i+1)+" ");
@@ -30,14 +30,14 @@ public class Q2_2017 {
                 }
                 //Check each participant
                 for(i=0;i<N;i++){
-                    int count=0;                    
+                    int count = 0;                    
                     for(j=0;j<5;j++){
                         if(A[i][j].equals(K[j])){
                             count++;
                         }
                     }
                     S[i] = count;
-                    if(count>highCount){highCount=count;}
+                    if(count>highScore){highScore=count;}
                 }
                 //Display results
                 System.out.println("Scores:");
@@ -45,10 +45,10 @@ public class Q2_2017 {
                     System.out.print("\nParticipant "+(j+1)+" = "+S[j]);
                 }
                 //Display Highest scorers
-                System.out.print("\nHighest Score:");
+                System.out.printf("%n%-16s","Highest Score:");
                 for(j=0;j<N;j++){
-                    if(S[j]==highCount){
-                        System.out.print("Participant "+(j+1)+"\n");
+                    if(S[j]==highScore){
+                        System.out.printf("%12s%d%n%-16s","Participant ",(j+1),"");
                     }
                 }       
             }else{
