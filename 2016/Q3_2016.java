@@ -55,11 +55,11 @@ public class Q3_2016 {
                 System.out.println("NUMBER OF WORDS BEGINNING AND ENDING WITH A VOWEL = "+count);    
                 System.out.println(resent);  
             }else{
-                System.out.print("INVALID INPUT");
+                System.out.println("INVALID INPUT");
             }
         } catch (Exception e) {
             //TODO: handle exception
-            System.out.print("INVALID INPUT");
+            System.out.println("INVALID INPUT");
         }        
         
     }
