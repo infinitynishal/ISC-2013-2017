@@ -20,7 +20,7 @@ public class Q2_2013 {
                     }
                 }
                 //Output Original Array  
-                System.out.println("ORIGINAL MARIX \n"); 
+                System.out.println("ORIGINAL MATRIX \n"); 
                 for(i=0;i<M;i++){
                     for(j=0;j<M;j++){
                         System.out.print(A[i][j]+"\t");

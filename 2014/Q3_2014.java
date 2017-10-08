@@ -33,7 +33,7 @@ public class Q3_2014 {
                 if(pos>=0||pos<N){
                     //Printing out the modified sentence
                     for (i=0;i<N;i++){
-                        if(i==pos&&arr[pos].equals(word_delete)){
+                        if((i==pos)&&(arr[pos].equals(word_delete))){
 
                         }else{
                             mod_sentence += (arr[i]+" ");
